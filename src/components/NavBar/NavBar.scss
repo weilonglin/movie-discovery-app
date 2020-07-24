@@ -2,13 +2,3 @@ a {
   font-size: large;
   transition: transform 0.5s ease;
 }
-
-a :hover {
-  transform: scale(1.5);
-  font-weight: bold;
-}
-
-a :active {
-  zoom: 1.2;
-  font-weight: bold;
-}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./DiscoverMoviesPage.scss";
 import { Switch, Route, Link, useParams } from "react-router-dom";
+import Search from "./Search";
 
 export default function DiscoverMoviesPage() {
   const [searchText, set_searchText] = useState("");
@@ -21,10 +22,10 @@ export default function DiscoverMoviesPage() {
       setMovies(showMovies);
     };
     search(params.title);
-  }, []);
+  }, [params]);
 
   const titles = movies.map((movie) => (
-    <Link to={`/discover/detail/${movie.imdbID}`}>
+    <Link to={`/discover/${movie.Title}/${movie.imdbID}`}>
       <div className="card shadow-sm mb-4 my-5">
         <div class="card-body pb-0">
           <h5 class="card-title">{movie.Title}</h5>
@@ -43,13 +44,8 @@ export default function DiscoverMoviesPage() {
 
   return (
     <div>
-      <h1>Discover some movies!</h1>
       <p>
-        <input
-          value={searchText}
-          onChange={(e) => set_searchText(e.target.value)}
-        />
-        <button>Search</button>
+        <Search />
         <div>{content}</div>
       </p>
     </div>

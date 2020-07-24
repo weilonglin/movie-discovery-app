@@ -33,7 +33,7 @@ function App() {
           <NavBar class="topTitle" sticky="top" />
 
           <Switch>
-            <Route path="/discover/detail/:imdb_id" component={MoviePage} />
+            <Route path="/discover/:title/:imdb_id" component={MoviePage} />
             <Route path="/discover/:title" component={DiscoverMoviesPage} />
             <Route path="/" component={Search} />
           </Switch>
