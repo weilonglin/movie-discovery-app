@@ -22,8 +22,13 @@ export default function NavBar() {
         </NavLink>
       </a>
       <a>
-        <NavLink exact to="/discover">
+        <NavLink exact to="/discover/:title">
           Discover Movies
+        </NavLink>
+      </a>
+      <a>
+        <NavLink exact to="/discover/detail/:imdb_id">
+          Movie details
         </NavLink>
       </a>
     </div>
