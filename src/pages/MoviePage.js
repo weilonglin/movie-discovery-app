@@ -23,5 +23,47 @@ export default function MoviePage() {
 
   console.log("test", specificMovie);
 
-  return <div>{specificMovie.Actors}</div>;
+  return (
+    <div>
+      <h3>{specificMovie.Title}</h3>
+      <img src={specificMovie.Poster} />
+      <p>
+        {" "}
+        <h5>Actors:</h5> {specificMovie.Actors}
+      </p>
+      <p>
+        {" "}
+        <h5>Plot:</h5> {specificMovie.Plot}
+      </p>
+      <p>
+        {" "}
+        <h5>Runtime: </h5>
+        {specificMovie.Runtime}
+      </p>
+      <p>
+        {" "}
+        <h5>Awards:</h5> {specificMovie.Awards}
+      </p>
+      <p>
+        {" "}
+        <h5>Box Office:</h5> {specificMovie.BoxOffice}
+      </p>
+      <p>
+        {" "}
+        <h5>Release year:</h5> {specificMovie.Year}
+      </p>
+      <p>
+        {" "}
+        <h5>Genre:</h5> {specificMovie.Genre}
+      </p>
+      <p>
+        {" "}
+        <h5>IMDB Rating:</h5> {specificMovie.imdbRating}
+      </p>
+      <p>
+        {" "}
+        <h5>Rated:</h5> {specificMovie.Rated}
+      </p>
+    </div>
+  );
 }

@@ -26,8 +26,6 @@ import Search from "./pages/Search";
 function App() {
   return (
     <main className="container">
-      <div className="menuBar"></div>
-
       <div className="row">
         <div className="col-md-6 col-lg-4">
           <NavBar class="topTitle" sticky="top" />
